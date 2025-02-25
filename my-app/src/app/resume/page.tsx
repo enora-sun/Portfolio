@@ -1,4 +1,5 @@
 import React from 'react';
+import BackButton from "../../../components/BackButton";
 
 const Resume = () =>{
     return (
@@ -11,4 +12,16 @@ const Resume = () =>{
             )
 }
 
-export default Resume;
+const Resume_Back: React.FC = () => {
+    return (
+      <div className="p-6">
+        <BackButton />
+        <h1 className="text-2xl font-bold mt-4">About Me</h1>
+        <p>This is the About page.</p>
+      </div>
+    );
+  };
+
+const components = {Resume, Resume_Back };
+
+export default components;
