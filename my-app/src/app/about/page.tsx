@@ -1,4 +1,5 @@
 import React from 'react';
+import BackButton from "../components/BackButton";
 
 const About = () =>{
     return (
@@ -21,4 +22,17 @@ const About = () =>{
     )
 }
 
-export default About;
+const About_Back: React.FC = () => {
+    return (
+      <div className="p-6">
+        <BackButton />
+        <h1 className="text-2xl font-bold mt-4">About Me</h1>
+        <p>This is the About page.</p>
+      </div>
+    );
+  };
+
+const components = { About, About_Back };
+
+export default components;
+
