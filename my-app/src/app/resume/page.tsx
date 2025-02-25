@@ -8,20 +8,10 @@ const Resume = () =>{
             <p className="text-lg text-gray-700 max-w-2xl text-center">
             Space holder for my resume and contact info.
             </p>
+            <br></br>
+            <BackButton />
             </div>
             )
 }
 
-const Resume_Back: React.FC = () => {
-    return (
-      <div className="p-6">
-        <BackButton />
-        <h1 className="text-2xl font-bold mt-4">About Me</h1>
-        <p>This is the About page.</p>
-      </div>
-    );
-  };
-
-const components = {Resume, Resume_Back };
-
-export default components;
+export default Resume;

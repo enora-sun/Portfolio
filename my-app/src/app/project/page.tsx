@@ -8,20 +8,11 @@ const Project = () =>{
             <p className="text-lg text-gray-700 max-w-2xl text-center">
             Space holder for my projects.
             </p>
+            <br></br>
+            <BackButton />
             </div>
             )
 }
 
-const Project_Back: React.FC = () => {
-    return (
-      <div className="p-6">
-        <BackButton />
-        <h1 className="text-2xl font-bold mt-4">About Me</h1>
-        <p>This is the About page.</p>
-      </div>
-    );
-  };
 
-const components = { Project, Project_Back };
-
-export default components;
+export default Project;
