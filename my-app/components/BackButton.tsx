@@ -7,7 +7,8 @@ const BackButton: React.FC = () => {
   return (
     <button
       onClick={() => router.push("/")}  // Navigates to homepage
-      className="text-lg bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition z-10 relative"
+      style={{ backgroundColor: "lightskyblue", color: "white" }}
+      className="px-6 py-3 text-lg font-semibold rounded-lg shadow-md transition-all duration-300 hover:bg-blue-500 hover:scale-105 active:scale-95 drop-shadow-lg"
     >
       ← Back to Home
     </button>
