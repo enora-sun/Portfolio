@@ -29,7 +29,7 @@ export default function Home() {
       {/* Centered Page Content */}
       <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center flex-grow z-10">
         <h1 className="text-9xl font-bold font-fancy text-transparent bg-clip-text bg-gradient-to-br from-black/90 to-black/40 opacity-0 translate-y-4 animate-fade-in">Enora Sun</h1>
-        <p className="text-3xl mt-4 font-mono">Welcome to my portfolio!</p>
+        <p className="text-3xl mt-4 font-mono animate-fade-in">Welcome to my portfolio!</p>
       </div>
     </div>
   );
