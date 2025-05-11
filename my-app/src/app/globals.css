@@ -10,7 +10,7 @@
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: sans-serif;
+  font-family: font-mono font-extralight;
 }
 /* BLOB BACKGROUND STYLES */
 .blob-outer-container {
@@ -18,30 +18,22 @@ body {
   height: 100%;
   width: 100%;
   z-index: 0;
-  inset: 0;
-  margin: auto;
   filter: blur(220px);
 }
 
 .blob-inner-container {
   border-radius: 99999px;
   position: absolute;
-  inset: 0;
-  margin: auto;
   width: 100vw;
   height: 100vh;
   min-width: 1000px;
-  overflow: hidden;
   background-color: #ffffff;
-  transform: scale(3);
 }
 
 .blob {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  inset: 0;
-  margin: auto;
   background: conic-gradient(from 0deg, rgb(10, 35, 255), rgb(247, 247, 59), #adff8c, #8657f4, #ef58a1, #09f);
   animation: spinBlob 8s linear infinite;
 }
@@ -67,6 +59,19 @@ body {
 
 .animate-fade-in {
   animation: fade-in 3s ease-out forwards;
+}
+
+@font-face {
+  font-family: 'Boheme Floral';
+  src: url('/fonts/BohemeFloral.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-boheme {
+  font-family: 'Boheme Floral', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 

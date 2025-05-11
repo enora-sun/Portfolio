@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function Home() {
   return (
 
-    <div className="min-h-screen flex flex-col relative overflow-hidden">
+    <div className="min-h-screen relative overflow-visible">
       {/* Glowing Rotating Blob Background */}
       <div className="blob-outer-container">
         <div className="blob-inner-container">
@@ -13,6 +13,7 @@ export default function Home() {
       {/* Top Navigation Bar */}
       <nav className="flex justify-between p-5">
       <div className="flex justify-between w-full max-w-6xl mx-auto">
+        
           {["about", "project", "resume"].map((page) => (
             <Link
               key={page}
@@ -27,8 +28,11 @@ export default function Home() {
       </nav>
 
       {/* Centered Page Content */}
-      <div className="pointer-events-none absolute inset-0 flex flex-col items-center justify-center flex-grow z-10">
-        <h1 className="text-9xl font-bold font-fancy text-transparent bg-clip-text bg-gradient-to-br from-black/90 to-black/40 opacity-0 translate-y-4 animate-fade-in">Enora Sun</h1>
+      <div className="pointer-events-none absolute 
+      inset-0 flex flex-col items-center justify-center z-10">
+        <h1 className="font-boheme text-9xl font-bold leading-relaxed overflow-x-visible 
+        text-transparent bg-clip-text bg-gradient-to-br from-black/90 to-black/40 
+        opacity-0 animate-fade-in antialiased px-9">Enora Sun</h1>
         <p className="text-3xl mt-4 font-mono animate-fade-in">Welcome to my portfolio!</p>
       </div>
     </div>

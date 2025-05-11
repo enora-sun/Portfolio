@@ -13,7 +13,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="relative bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden w-[400px]">
+    <div className="font-mono relative bg-gray-900 text-white rounded-lg shadow-lg overflow-hidden w-[400px]">
       {/* Image Container */}
       <div
         className="relative h-[250px] overflow-hidden"
@@ -38,7 +38,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-2 inline-block text-blue-400 hover:underline"
+          className=" mt-2 inline-block text-blue-400 hover:underline"
         >
           View Project →
         </a>
