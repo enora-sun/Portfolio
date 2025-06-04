@@ -75,7 +75,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
-  overflow: hidden;
+  overflow: auto;
   background: linear-gradient(40deg, var(--color-bg1), var(--color-bg2));
   top: 0;
   left: 0;
