@@ -60,7 +60,34 @@ export default function Home() {
             height={250}
             onClick={handleClick}
             className="absolute animate-fade-in"
-            style={{ left: "-27%", top: "-75%" }} // You might need to fine-tune these
+            style={{ left: "-30%", top: "-75%" }} 
+          />
+          <Image
+            src="/images/pointing-fairy.PNG"
+            alt="Decorative"
+            width={250}
+            height={250}
+            onClick={handleClick}
+            className="absolute animate-fade-in"
+            style={{ left: "77%", top: "-20%" }} 
+          />
+          <Image
+            src="/images/star-plant.PNG"
+            alt="Decorative"
+            width={250}
+            height={250}
+            onClick={handleClick}
+            className="absolute animate-fade-in"
+            style={{ left: "-40%", top: "90%" }} 
+          />
+          <Image
+            src="/images/star-plant.PNG"
+            alt="Decorative"
+            width={250}
+            height={250}
+            onClick={handleClick}
+            className="absolute animate-fade-in"
+            style={{ left: "90%", top: "90%" }} 
           />
         </div>
         {/* Description block - directly follows the title block */}
