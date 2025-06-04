@@ -80,24 +80,24 @@ const About = () => {
           <div className="interactive" />
         </div>
 
-        <div className="w-full px-12">
-          <div className="flex flex-row items-start gap-x-8">
+        <div className="relative z-100 w-full px-12 min-h-screen flex items-center justify-center">
+          <div className="flex flex-row items-start gap-x-12">
             {/* LEFT TEXT */}
             <div className="w-2/3 text-white font-mono">
               <div className="flex flex-col justify-start items-center text-center">
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p className="text-lg max-w-2xl mb-6">
-                  Hi! My name is Enora, a Computer Science student at UBC.
-                  <br />I enjoy working on projects that promote{" "}
+                  Hi! <br/> My name is Enora, a Computer Science student at UBC.
+                  <br/>I enjoy projects that promote{" "}
                   <span className="font-bold">social good</span> in tech.
                 </p>
 
                 <h2 className="text-2xl font-semibold mb-2">Fun Facts</h2>
                 <ul className="list-disc text-left text-lg ml-6">
-                  <li>
-                    🌟 I have a twelve year old iPod that still works (barely).
-                  </li>
-                  <li>🎨 I would love to talk with Michel Foucault.</li>
+                  <li>🌟 I have a twelve year old iPod that still works
+                    <br></br>&nbsp;&nbsp;&nbsp;(barely).</li>
+                  <li>🎨 If I can talk with any philosopher in the world, 
+                    <br></br>&nbsp;&nbsp;&nbsp;I would pick Michel Foucault.</li>
                   <li>🎮 Merry is my favorite Animal Crossing character.</li>
                 </ul>
 
@@ -108,13 +108,13 @@ const About = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="w-1/3 flex items-start">
+            <div className="overflow-hidden w-1/3 flex items-start">
               <Image
                 src="/images/me.PNG"
                 alt="Enora"
                 width={300}
                 height={300}
-                className="rounded-lg shadow-lg"
+                className="object-cover w-full h-full"
               />
             </div>
           </div>
