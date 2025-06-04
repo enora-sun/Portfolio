@@ -6,6 +6,7 @@ import "./style.css";
 import Link from "next/link";
 import Image from "next/image";
 import useFairyMusic from "@/hooks/useFairyMusic";
+import Typewriter from "react-ts-typewriter";
 
 const About = () => {
   useEffect(() => {
@@ -87,17 +88,21 @@ const About = () => {
               <div className="flex flex-col justify-start items-center text-center">
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p className="text-lg max-w-2xl mb-6">
-                  Hi! <br/> My name is Enora, a Computer Science student at UBC.
-                  <br/>I enjoy projects that promote{" "}
+                  <Typewriter text="My name is Enora, a Computer Science student at UBC." />
+                  <br />I enjoy projects that promote{" "}
                   <span className="font-bold">social good</span> in tech.
                 </p>
 
                 <h2 className="text-2xl font-semibold mb-2">Fun Facts</h2>
                 <ul className="list-disc text-left text-lg ml-6">
-                  <li>🌟 I have a twelve year old iPod that still works
-                    <br></br>&nbsp;&nbsp;&nbsp;(barely).</li>
-                  <li>🎨 If I can talk with any philosopher in the world, 
-                    <br></br>&nbsp;&nbsp;&nbsp;I would pick Michel Foucault.</li>
+                  <li>
+                    🌟 I have a twelve year old iPod that still works
+                    <br></br>&nbsp;&nbsp;&nbsp;(barely).
+                  </li>
+                  <li>
+                    🎨 If I can talk with any philosopher in the world,
+                    <br></br>&nbsp;&nbsp;&nbsp;I would pick Michel Foucault.
+                  </li>
                   <li>🎮 Merry is my favorite Animal Crossing character.</li>
                 </ul>
 
@@ -108,13 +113,13 @@ const About = () => {
             </div>
 
             {/* RIGHT IMAGE */}
-            <div className="overflow-hidden w-1/3 flex items-start">
+            <div className="w-1/3 flex items-start">
               <Image
                 src="/images/me.PNG"
                 alt="Enora"
                 width={300}
                 height={300}
-                className="object-cover w-full h-full"
+                className="custom-photo object-cover w-full h-full transition duration-300 hover:drop-shadow-[0_0_20px_rgba(255,255,255,0.7)]"
               />
             </div>
           </div>
@@ -125,38 +130,3 @@ const About = () => {
 };
 
 export default About;
-
-{
-  /* <div className="text-container ">
-          <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6">
-            <h1 className="text-4xl font-bold mb-4">About Me</h1>
-            <p className="text-lg  max-w-2xl text-center">
-              Hi! My name is Enora, a Computer Science student at UBC. I love
-              building projects that promote{" "}
-              <span className="font-bold">gender equality</span> in tech and
-              exploring innovative ways to use{" "}
-              <span className="font-bold">technology for social good</span>.
-            </p>
-
-            <div className="mt-6">
-              <h2 className="text-2xl font-semibold text-center"> Fun Facts</h2>
-              <ul className="mt-2 list-disc">
-                <li>
-                  🌟 I have a twelve year old ipod that still works (barely).
-                </li>
-                <li>
-                  🎨 If I could talk to one philosopher, I would chose Michel
-                  Foucault.
-                </li>
-                <li>🎮 Merry is my favorite Animal Crossing character. </li>
-              </ul>
-            </div>
-            <br></br>
-            <BackButton />
-          </div>
-        </div>
-
-        <div className="flex justify-end">
-          <Image src="/images/me.PNG" alt="Enora" width={300} height={300} />
-        </div> */
-}

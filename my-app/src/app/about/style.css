@@ -223,3 +223,6 @@ body {
   pointer-events: none;
   filter: none;
 }
+.custom-photo {
+  border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%; 
+}
