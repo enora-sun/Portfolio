@@ -12,8 +12,9 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start; /* align to left */
+  align-items: flex-start; /* align to top */
+  padding: 0.1rem 6rem; /* top/bottom 4rem, left/right 6rem */
   color: white;
   opacity: 0.8;
   user-select: none;
