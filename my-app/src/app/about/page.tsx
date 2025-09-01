@@ -3,18 +3,13 @@
 import React, { useEffect } from "react";
 import BackButton from "../../../components/BackButton";
 import "./style.css";
-import Link from "next/link";
 import Image from "next/image";
-import useFairyMusic from "@/hooks/useFairyMusic";
 import Typewriter from "react-ts-typewriter";
 
 const About = () => {
   useEffect(() => {
-    requestAnimationFrame(() => {
-      const interBubble =
-        document.querySelector<HTMLDivElement>(".interactive");
-      if (!interBubble) return;
-
+    const interBubble = document.querySelector<HTMLDivElement>(".interactive");
+    if (interBubble) {
       let curX = 0;
       let curY = 0;
       let tgX = 0;
@@ -22,33 +17,40 @@ const About = () => {
 
       const updateColor = (x: number) => {
         const hue = Math.floor((x / window.innerWidth) * 360);
+        // Now TypeScript knows interBubble is not null here
         interBubble.style.background = `radial-gradient(circle at center, hsla(${hue}, 100%, 70%, 0.9) 0%, hsla(${hue}, 100%, 70%, 0.4) 70%)`;
         interBubble.style.boxShadow = `0 0 20px hsla(${hue}, 100%, 70%, 0.6)`;
       };
 
-      function move() {
+      const move = () => {
         curX += (tgX - curX) / 20;
         curY += (tgY - curY) / 20;
+        // Or here
         interBubble.style.transform = `translate(${Math.round(
           curX
         )}px, ${Math.round(curY)}px)`;
         requestAnimationFrame(move);
-      }
+      };
 
       const handleMouseMove = (event: MouseEvent) => {
         tgX = event.clientX;
         tgY = event.clientY;
         updateColor(event.clientX);
-        console.log("Mouse:", tgX, tgY);
+        // console.log("Mouse:", tgX, tgY); // console.log is fine to keep if you need it
       };
 
       window.addEventListener("mousemove", handleMouseMove);
-      move();
+      move(); // Start the animation loop
 
+      // The cleanup function is returned from within the 'if' block
       return () => {
         window.removeEventListener("mousemove", handleMouseMove);
+        // Note: The 'move' loop will stop on its own when the component unmounts,
+        // but for completeness, you could add cancellation logic if needed.
       };
-    });
+    }
+    // If interBubble is not found, this effect does nothing and sets up no listeners.
+    // --- END: THE FIX ---
   }, []);
 
   return (

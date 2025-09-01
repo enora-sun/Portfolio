@@ -1,11 +1,13 @@
 import React from "react";
 import BackButton from "../../../components/BackButton";
 import ProjectCard from "../../../components/ProjectCard";
+import GradientBackground from "../../../components/GradientBackground";
+import "./style.css";
 
 const projects = [
   {
     image: "/img/portfolio/toyota/connected-services-plans.webp",
-    title: "Toyota Connected Services",
+    title: "Leadership Performance Conversation Simulator",
     description: "A redesigned section for Toyota’s website to improve UX.",
     link: "projects/toyota-product-redesign.html",
   },
@@ -43,10 +45,11 @@ const projects = [
 
 const Project = () => {
   return (
-    <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
-      <h1 className="text-4xl text-sky-400 font-bold mb-4">Projects</h1>
-      <p className="text-lg text-gray-700 max-w-2xl text-center">
-        Space holder for my projects.
+    <GradientBackground>
+    <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6 text-white">
+      <h1 className="text-4xl font-bold mb-4">Projects</h1>
+      <p className="text-lg max-w-2xl text-center">
+        Checkout my work here!
       </p>
 
       {/* Project List */}
@@ -59,6 +62,7 @@ const Project = () => {
       <br></br>
       <BackButton />
     </div>
+    </GradientBackground>
   );
 };
 

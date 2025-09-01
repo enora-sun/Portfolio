@@ -1,17 +1,21 @@
-import React from 'react';
+import React from "react";
 import BackButton from "../../../components/BackButton";
+import GradientBackground from "../../../components/GradientBackground";
+import "./style.css";
 
-const Resume = () =>{
-    return (
-        <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6 bg-gray-100">
-            <h1 className="text-4xl text-sky-400 font-bold mb-4">Resume</h1>
-            <p className="text-lg text-gray-700 max-w-2xl text-center">
-            Space holder for my resume and contact info.
-            </p>
-            <br></br>
-            <BackButton />
-            </div>
-            )
-}
+const Resume = () => {
+  return (
+    <GradientBackground>
+      <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6 text-white">
+        <h1 className="text-4xl font-bold mb-4">Resume</h1>
+        <p className="text-lg max-w-2xl text-center">
+          Space holder for my resume and contact info.
+        </p>
+        <br></br>
+        <BackButton />
+      </div>
+    </GradientBackground>
+  );
+};
 
 export default Resume;
