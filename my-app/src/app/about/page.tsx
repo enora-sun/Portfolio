@@ -100,7 +100,7 @@ const About = () => {
                   <li> Technical Learning & Development Intern at Geotab Inc.</li>
                   <li> Research Assistant at UBC Civil Engineering. </li>
                   <li> Full-stack engineer at Lingotalk Inc.</li>
-                  <li> Coordinator Support at UBC's Girlsmarts4tech.</li>
+                  <li> Coordinator Support at UBC Girlsmarts4tech.</li>
                 </ul>
                 <br></br>
 
