@@ -47,7 +47,7 @@ const GradientBackground = ({ children }: GradientBackgroundProps) => {
   return (
     <div>
       {/* SVG for the 'goo' effect */}
-      <svg width="0" height="0">
+      <svg id="goo-defs" width="0" height="0">
         <filter id="goo">
           <feGaussianBlur in="SourceGraphic" stdDeviation="40" result="blur" />
           <feColorMatrix
