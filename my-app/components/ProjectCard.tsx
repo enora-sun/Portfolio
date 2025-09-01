@@ -13,7 +13,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="font-mono relative bg-gray-600 text-white rounded-lg shadow-lg overflow-hidden w-[400px]">
+    <div className="font-mono relative bg-gray-600/70 text-white rounded-lg shadow-lg overflow-hidden w-[400px]">
       {/* Image Container */}
       <div
         className="relative h-[250px] overflow-hidden"

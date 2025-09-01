@@ -201,3 +201,106 @@
   pointer-events: none;
   filter: none;
 }
+.container {
+  width: 100%;
+  max-width: 700px; /* Prevents the form from being too wide on large screens */
+  margin: 0 auto; /* Centers the container */
+  padding: 2rem;
+  background: rgba(22, 22, 22, 0.4); /* Semi-transparent background */
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px); /* The key to the "frosted glass" effect */
+  -webkit-backdrop-filter: blur(10px); /* For Safari support */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Styling for the h1 tag inside the form container */
+.container h1 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #f1f1f1;
+}
+
+/* Provides spacing between form elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Creates a flex row for side-by-side inputs */
+.form-row {
+  display: flex;
+  gap: 1rem; /* Space between the columns */
+}
+
+.col {
+  flex: 1; /* Each column takes up equal space */
+}
+
+/* Main styling for input fields and the textarea */
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  font-family: inherit; /* Inherits the 'font-mono' from the parent */
+  font-size: 1rem;
+  color: #ffffff; /* Text color for user input */
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.1
+  ); /* Subtle, transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none; /* Removes the default browser outline */
+}
+
+/* Style for the placeholder text */
+.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Style for when an input is focused (clicked on) */
+.form-control:focus {
+  border-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for the submit button */
+.btn {
+  display: block; /* Makes the button take the full width */
+  width: 100%;
+  padding: 15px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #fff;
+  background-color: rgba(233, 255, 147, 0.8); /* A nice indigo color, semi-transparent */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect for the button */
+.btn:hover {
+  background-color: rgba(99, 102, 241, 1); /* Becomes fully opaque on hover */
+  transform: translateY(-2px); /* Lifts the button slightly */
+}
+
+/* --- Responsive Design for Mobile --- */
+@media (max-width: 640px) {
+  .form-row {
+    flex-direction: column; /* Stacks the Name and Email fields vertically */
+  }
+
+  .container {
+    padding: 1.5rem; /* Reduces padding on smaller screens */
+  }
+
+  h1 {
+    font-size: 2.5rem; /* Adjust heading size */
+  }
+}

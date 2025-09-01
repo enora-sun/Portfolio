@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import BackButton from "../../../components/BackButton";
 import GradientBackground from "../../../components/GradientBackground";
@@ -7,10 +8,55 @@ const Resume = () => {
   return (
     <GradientBackground>
       <div className="font-mono flex flex-col items-center justify-center min-h-screen p-6 text-white">
-        <h1 className="text-4xl font-bold mb-4">Resume</h1>
-        <p className="text-lg max-w-2xl text-center">
-          Space holder for my resume and contact info.
-        </p>
+        <h1 className="text-4xl font-bold mb-4">My Contact Info</h1>
+        <br></br>
+        <div className="container">
+          <h1>Email me for a copy of my resume!</h1>
+          <form
+            target="_blank"
+            action="https://formsubmit.co/sunyinuo1120@gmail.com"
+            method="POST"
+            onSubmit={(e) => {
+              // reset the form right away
+              (e.target as HTMLFormElement).reset();
+            }}
+          >
+            <div className="form-group">
+              <div className="form-row">
+                <div className="col">
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    placeholder="Full Name"
+                    required
+                  />
+                </div>
+                <div className="col">
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    placeholder="Email Address"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div className="form-group">
+              <textarea
+                placeholder="Your Message"
+                className="form-control"
+                name="message"
+                rows={10}
+                required
+              ></textarea>
+            </div>
+            <button type="submit" className="btn btn-lg btn-dark btn-block">
+              Submit Form
+            </button>
+          </form>
+        </div>
         <br></br>
         <BackButton />
       </div>
