@@ -88,18 +88,26 @@ const About = () => {
             {/* LEFT TEXT */}
             <div className="w-2/3 text-white font-mono">
               <div className="flex flex-col justify-start items-center text-center">
+               
                 <h1 className="text-4xl font-bold mb-4">About Me</h1>
                 <p className="text-lg max-w-2xl mb-6">
-                  <Typewriter text="My name is Enora, a Computer Science student at UBC." />
-                  <br />I enjoy projects that promote{" "}
-                  <span className="font-bold">social good</span> in tech.
+                  <Typewriter text="I'm Enora, a Computer Science student at UBC." />
+                  <br />I enjoy projects that promote{" "} <span className="font-bold">social good</span> in tech.
                 </p>
+
+                <h2 className="text-2xl font-semibold mb-2">Experience</h2>
+                <ul className="list-disc text-left text-lg ml-6">
+                  <li> Technical Learning & Development Intern at Geotab Inc.</li>
+                  <li> Research Assistant at UBC Civil Engineering. </li>
+                  <li> Full-stack engineer at Lingotalk Inc.</li>
+                  <li> Coordinator Support at UBC's Girlsmarts4tech.</li>
+                </ul>
+                <br></br>
 
                 <h2 className="text-2xl font-semibold mb-2">Fun Facts</h2>
                 <ul className="list-disc text-left text-lg ml-6">
                   <li>
-                    🌟 I have a twelve year old iPod that still works
-                    <br></br>&nbsp;&nbsp;&nbsp;(barely).
+                    🌟 I have a twelve year old iPod that kinda work.
                   </li>
                   <li>
                     🎨 If I can talk with any philosopher in the world,
