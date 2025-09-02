@@ -68,7 +68,7 @@ body {
   font-style: normal;
 }
 .font-boheme {
-  font-family: 'Boheme Floral', sans-serif;
+  font-family: var(--font-boheme), sans-serif;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
