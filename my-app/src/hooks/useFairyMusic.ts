@@ -1,15 +1,15 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
-
+const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 const songs: string[] = [
-  "/music/song1.mp3",
-  "/music/song2.mp3",
-  "/music/song3.mp3",
-  "/music/song4.mp3",
-  "/music/song5.mp3",
-  "/music/song6.mp3",
-  "/music/song7.mp3",
-  "/music/song8.mp3",
+  `${prefix}/music/song1.mp3`,
+  `${prefix}/music/song2.mp3`,
+  `${prefix}/music/song3.mp3`,
+  `${prefix}/music/song4.mp3`,
+  `${prefix}/music/song5.mp3`,
+  `${prefix}/music/song6.mp3`,
+  `${prefix}/music/song7.mp3`,
+  `${prefix}/music/song8.mp3`,
 ];
 
 export default function useFairyMusic() {
