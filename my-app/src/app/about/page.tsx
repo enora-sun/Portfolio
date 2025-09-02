@@ -84,8 +84,8 @@ const About = () => {
           <div className="interactive" />
         </div>
 
-        <div className="relative z-100 w-full px-12 min-h-screen flex items-center justify-center">
-          <div className="flex flex-row items-start gap-x-12">
+        <div className="relative z-100 w-full px-6 min-h-screen flex items-center justify-center">
+          <div className="flex flex-row items-center gap-x-6 max-w-5xl w-full">
             {/* LEFT TEXT */}
             <div className="w-2/3 text-white font-mono">
               <div className="flex flex-col justify-start items-center text-center">

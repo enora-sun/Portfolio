@@ -64,7 +64,7 @@ export default function Home() {
             style={{ left: "-30%", top: "-75%" }} 
           />
           <Image
-            src={`${prefix}/images/point-fairy.PNG`}
+            src={`${prefix}/images/pointing-fairy.PNG`}
             alt="Decorative"
             width={250}
             height={250}
