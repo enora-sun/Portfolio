@@ -5,6 +5,14 @@ import GradientBackground from "../../../components/GradientBackground";
 import "./style.css";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
+const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
+  // capture the form element synchronously
+  const form = e.currentTarget;
+  // don't call preventDefault(); we want the POST to FormSubmit
+  window.setTimeout(() => form.reset(), 400);
+};
+
+
 const Resume = () => {
   return (
     <GradientBackground>
@@ -37,14 +45,33 @@ const Resume = () => {
         <div className="container">
           <h1>Email me for a copy of my resume!</h1>
           <form
-            target="_blank"
             action="https://formsubmit.co/sunyinuo1120@gmail.com"
             method="POST"
-            onSubmit={(e) => {
-              // reset the form right away
-              (e.target as HTMLFormElement).reset();
-            }}
+            target="_blank"
+            acceptCharset="UTF-8"
+            onSubmit={handleSubmit}
           >
+            {/* FormSubmit options (all hidden) */}
+            <input
+              type="hidden"
+              name="_subject"
+              value="Portfolio resume request"
+            />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_captcha" value="false" />
+            {/* Use a FULL URL for the thank-you redirect */}
+            <input
+              type="hidden"
+              name="_next"
+              value="https://enora-sun.github.io/Portfolio/thanks.html"
+            />
+            {/* (Optional) tell FormSubmit the exact page URL, helpful after domain changes */}
+            <input
+              type="hidden"
+              name="_url"
+              value="https://enora-sun.github.io/Portfolio/about"
+            />
+
             <div className="form-group">
               <div className="form-row">
                 <div className="col">
@@ -57,6 +84,7 @@ const Resume = () => {
                   />
                 </div>
                 <div className="col">
+                  {/* make sure you keep a field named 'email' */}
                   <input
                     type="email"
                     name="email"
@@ -67,15 +95,17 @@ const Resume = () => {
                 </div>
               </div>
             </div>
+
             <div className="form-group">
               <textarea
-                placeholder="Your Message"
-                className="form-control"
                 name="message"
+                className="form-control"
+                placeholder="Your Message"
                 rows={10}
                 required
-              ></textarea>
+              />
             </div>
+
             <button type="submit" className="btn btn-lg btn-dark btn-block">
               Submit Form
             </button>
