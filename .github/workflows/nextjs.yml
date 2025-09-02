@@ -24,7 +24,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          lfs: true          # 👈 pulls Git LFS files (audio/images)
+          lfs: true                # pull real bytes for any Git LFS media
 
       - name: Setup Node
         uses: actions/setup-node@v4
@@ -36,13 +36,13 @@ jobs:
       - name: Install deps
         run: npm ci
 
-      - name: Build (Next.js)
+      - name: Build (static export via output: export)
         env:
-          NEXT_PUBLIC_GH_PAGES: "true"   # 👈 enables basePath=/Portfolio
-        run: npm run build
+          NEXT_PUBLIC_GH_PAGES: "true"   # triggers basePath=/Portfolio in your config
+        run: npm run build                # generates ./out automatically
 
-      - name: Export static site (creates ./out)
-        run: npx next export
+      - name: Verify build output (optional)
+        run: ls -la out && ls -la out/images || true
 
       - name: Configure Pages
         uses: actions/configure-pages@v5
@@ -61,4 +61,3 @@ jobs:
     steps:
       - id: deploy
         uses: actions/deploy-pages@v4
-
