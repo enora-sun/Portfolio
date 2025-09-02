@@ -4,6 +4,7 @@ import Image from "next/image";
 import useFairyMusic from "@/hooks/useFairyMusic";
 
 export default function Home() {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
   const { isPlaying, handleClick } = useFairyMusic();
   return (
     <div className="min-h-screen relative overflow-visible flex flex-col">
@@ -54,7 +55,7 @@ export default function Home() {
             Enora Sun
           </h1>
           <Image
-            src="/images/fairy1.PNG"
+            src={`${prefix}/images/fairy1.PNG`}
             alt="Decorative"
             width={250}
             height={250}
@@ -63,7 +64,7 @@ export default function Home() {
             style={{ left: "-30%", top: "-75%" }} 
           />
           <Image
-            src="/images/pointing-fairy.PNG"
+            src={`${prefix}/images/point-fairy.PNG`}
             alt="Decorative"
             width={250}
             height={250}
@@ -72,7 +73,7 @@ export default function Home() {
             style={{ left: "77%", top: "-20%" }} 
           />
           <Image
-            src="/images/star-plant.PNG"
+            src={`${prefix}/images/star-plant.PNG`}
             alt="Decorative"
             width={250}
             height={250}
@@ -81,7 +82,7 @@ export default function Home() {
             style={{ left: "-40%", top: "90%" }} 
           />
           <Image
-            src="/images/star-plant.PNG"
+            src={`${prefix}/images/star-plant.PNG`}
             alt="Decorative"
             width={250}
             height={250}

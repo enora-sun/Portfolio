@@ -11,6 +11,8 @@ interface ProjectCardProps {
 
 const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
   const [isHovered, setIsHovered] = useState(false);
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
+  const imageSrc = `${prefix}${image}`;
 
   return (
     <div className="font-mono relative bg-gray-600/60 text-white rounded-lg shadow-lg overflow-hidden w-[400px]">
@@ -21,7 +23,7 @@ const ProjectCard = ({ image, title, description, link }: ProjectCardProps) => {
         onMouseLeave={() => setIsHovered(false)}
       >
         <motion.img
-          src={image}
+          src={imageSrc}
           alt={title}
           className="absolute top-0 left-0 w-full h-auto object-cover"
           initial={{ y: 0 }}

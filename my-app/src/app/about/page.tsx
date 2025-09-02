@@ -7,6 +7,7 @@ import Image from "next/image";
 import Typewriter from "react-ts-typewriter";
 
 const About = () => {
+  const prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
   useEffect(() => {
     const interBubble = document.querySelector<HTMLDivElement>(".interactive");
     if (interBubble) {
@@ -125,7 +126,7 @@ const About = () => {
             {/* RIGHT IMAGE */}
             <div className="w-1/3 flex items-start">
               <Image
-                src="/images/me.PNG"
+                src={`${prefix}/images/me.PNG`}
                 alt="Enora"
                 width={300}
                 height={300}
