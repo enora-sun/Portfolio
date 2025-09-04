@@ -20,7 +20,7 @@ const projects = [
   {
     image: "/images/1reverseFlower.PNG",
     title: "Multi-Channel Network Database",
-    description: "Full-stack database web application using OracleDB, featuring RESTful API endpoints for CRUD operations, filtering, projection and analytical SQL queries (JOIN, GROUP BY, nested aggregation, division) for 20+ relational schema.",
+    description: "Full-stack database web application using OracleDB, featuring RESTful API endpoints for CRUD operations, filtering, projection and analytical SQL queries (JOIN, GROUP BY, nested aggregation, division) for 20+ relational schemas.",
     link: "https://github.com/enora-sun/Multi-Channel-Network-Database",
   },
   {
